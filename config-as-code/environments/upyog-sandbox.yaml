@@ -289,6 +289,15 @@ egov-workflow:
 fsm:
   heap: "-Xmx512m -Xms386m"
   memory_limits: 756Mi
+
+vehicle:
+  heap: "-Xmx512m -Xms386m"
+  memory_limits: 756Mi
+
+vendor:
+  heap: "-Xmx512m -Xms386m"
+  memory_limits: 756Mi
+  
 egov-idgen:
   idformat-from-mdms: "true"
   java-args: -Dspring.profiles.active=monitoring
