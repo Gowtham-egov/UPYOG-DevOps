@@ -603,6 +603,8 @@ pgr-services:
   time-before-closing-complaint: "3600000"
 
 pt-calculator-v2:
+  heap: "-Xmx512m -Xms386m"
+  memory_limits: 756Mi
   logging-level: "DEBUG"
 
 tl-services:
