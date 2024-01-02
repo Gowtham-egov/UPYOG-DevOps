@@ -70,6 +70,11 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: pet-services  
+   - name: EGOV_BILLINGSERVICE_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: egov-service-host
+        key: billing-service
   - name: EGOV_INTERNAL_MICROSERVICE_USER_UUID
     valueFrom:
       configMapKeyRef:
