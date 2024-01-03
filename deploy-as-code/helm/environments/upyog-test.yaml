@@ -590,6 +590,9 @@ pgr-services:
 pt-calculator-v2:
   logging-level: "DEBUG"
 
+pet-services:
+  logging-level: "DEBUG"
+
 tl-services:
   heap: "-Xmx128m -Xms64m"
   memory_limits: 384Mi
