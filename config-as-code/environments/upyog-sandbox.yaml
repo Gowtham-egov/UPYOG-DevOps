@@ -289,7 +289,9 @@ egov-workflow:
 fsm:
   heap: "-Xmx512m -Xms386m"
   memory_limits: 756Mi
-
+fsm-calculator:
+  heap: "-Xmx512m -Xms386m"
+  memory_limits: 756Mi
 vehicle:
   heap: "-Xmx512m -Xms386m"
   memory_limits: 756Mi
