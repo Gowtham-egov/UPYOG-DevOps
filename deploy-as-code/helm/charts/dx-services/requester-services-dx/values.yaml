@@ -20,8 +20,6 @@ healthChecks:
   enabled: true
   livenessProbePath: "/requester-services-dx/health"
   readinessProbePath: "/requester-services-dx/health"
-  
-namespace: egov  
 appType: "java-spring"
 tracing-enabled: true
 heap: "-Xmx256m -Xms256m"
