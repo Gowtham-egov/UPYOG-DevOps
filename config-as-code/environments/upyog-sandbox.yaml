@@ -818,7 +818,7 @@ zookeeper-v2:
 
 # es-v1-cluster >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 elasticsearch-data-v1:
-  replicas: 0
+  replicas: 3
   image:
     tag: 7.17.15
   persistence:
@@ -863,7 +863,7 @@ elasticsearch-data-infra-v1:
       memory: "2Gi"      
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 elasticsearch-master-v1:
-  replicas: 0
+  replicas: 3
   image:
     tag: 7.17.15
   persistence:
