@@ -8,8 +8,8 @@ image:
   repository: docker.elastic.co/elasticsearch/elasticsearch
   tag: 7.17.15
 
-clusterName: "elasticsearch-v1"
-nodeGroup: "data"
+clusterName: "elasticsearch"
+nodeGroup: "data-v1"
 
 # The service that non master groups will try to connect to when joining the cluster
 # This should be set to clusterName + "-" + nodeGroup for your master group
