@@ -904,6 +904,10 @@ elasticsearch-master-infra-v1:
     limits:
       memory: "896Mi"      
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+kibana-v1:
+  image:
+    tag: 7.17.15
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 es-curator-infra:
   namespace: es-cluster
   schedule: "45 18 * * *"
