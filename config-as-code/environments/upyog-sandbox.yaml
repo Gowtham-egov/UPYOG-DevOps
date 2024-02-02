@@ -818,8 +818,9 @@ zookeeper-v2:
 
 # es-v1-cluster >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 elasticsearch-data-v1:
+  replicas: 0
   image:
-    tag: 6.6.2
+    tag: 7.17.15
   persistence:
     enabled: true
     aws:
@@ -862,9 +863,9 @@ elasticsearch-data-infra-v1:
       memory: "2Gi"      
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 elasticsearch-master-v1:
-  replicas: 3
+  replicas: 0
   image:
-    tag: 6.6.2
+    tag: 7.17.15
   persistence:
     enabled: true
     aws:
