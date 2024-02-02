@@ -259,7 +259,7 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.name
-          {{- if eq .Values.roles.master "true" }}
+          {{- if eq .Values.roles "master" }}
           {{- if ge (int (include "elasticsearch.esMajorVersion" .)) 7 }}
           - name: cluster.initial_master_nodes
             value: "{{ template "elasticsearch.endpoints" . }}"
@@ -281,10 +281,8 @@ spec:
             value: {{ .Values.networkHost | quote }}                      
           - name: ES_JAVA_OPTS
             value: {{ .Values.esJavaOpts | quote }}
-          {{- range $role, $enabled := .Values.roles }}
-          - name: node.{{ $role }}
-            value: {{ $enabled | quote }}
-          {{- end }}
+          - name: node.roles
+            value: {{ .Values.roles | quote }}
 {{- if .Values.extraEnvs }}
 {{ toYaml .Values.extraEnvs | indent 10 }}
 {{- end }}
@@ -325,7 +323,7 @@ spec:
         {{- end }}
         {{- end }}
       {{- if .Values.masterTerminationFix }}
-      {{- if eq .Values.roles.master "true" }}
+      {{- if eq .Values.roles "master" }}
       # This sidecar will prevent slow master re-election
       # https://github.com/elastic/helm-charts/issues/63
       - name: elasticsearch-master-graceful-termination-handler
