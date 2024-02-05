@@ -283,6 +283,8 @@ spec:
             value: {{ .Values.esJavaOpts | quote }}
           - name: node.roles
             value: {{ .Values.roles | quote }}
+          - name: ingest.geoip.downloader.enabled
+            value: "false"
 {{- if .Values.extraEnvs }}
 {{ toYaml .Values.extraEnvs | indent 10 }}
 {{- end }}
