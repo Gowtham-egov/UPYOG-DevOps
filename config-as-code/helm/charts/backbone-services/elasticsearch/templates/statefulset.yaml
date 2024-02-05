@@ -273,7 +273,7 @@ spec:
             value: {{ .Values.masterService | quote }}
           {{- else }}
           - name: discovery.seed_hosts
-            value: {{ .Values.masterService | quote }}
+            value: {{ .Values.masterService }}-headless
           {{- end }}
           - name: cluster.name
             value: {{ .Values.clusterName | quote }}
