@@ -30,7 +30,7 @@ healthChecks:
 
 # Additional Container Envs
 env: |
-  - name: ELASTICSEARCH_URL
+  - name: ELASTICSEARCH_HOSTS
     value: {{ .Values.elasticsearchHosts | quote }}
   - name: SERVER_BASEPATH
     value: {{ .Values.serverBasePath | quote }}
