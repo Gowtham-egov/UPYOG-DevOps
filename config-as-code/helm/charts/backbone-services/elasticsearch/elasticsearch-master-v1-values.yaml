@@ -1,6 +1,6 @@
 
 name: elasticsearch-master-v1
-namespace: es-cluster
+namespace: es-test-cluster
 replicas: 3
 
 image:
