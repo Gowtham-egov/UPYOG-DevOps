@@ -6,7 +6,7 @@ replicas: 3
 image:
   pullPolicy: IfNotPresent  
   repository: docker.elastic.co/elasticsearch/elasticsearch
-  tag: 7.17.15
+  tag: 8.11.3
 
 clusterName: "elasticsearch"
 nodeGroup: "master-v1"
@@ -42,6 +42,8 @@ extraEnvs:
     value: "/usr/share/elasticsearch/data"
   - name: path.logs
     value: "/usr/share/elasticsearch/logs"
+  - name: xpack.security.enabled
+    value: false
 
 # Allows you to load environment variables from kubernetes secret or config map
 envFrom: []
