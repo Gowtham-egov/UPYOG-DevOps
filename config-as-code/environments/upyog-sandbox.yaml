@@ -820,7 +820,7 @@ zookeeper-v2:
 elasticsearch-data-v1:
   replicas: 3
   image:
-    tag: 7.17.15
+    tag: 8.11.3
   persistence:
     enabled: true
     aws:
@@ -865,7 +865,7 @@ elasticsearch-data-infra-v1:
 elasticsearch-master-v1:
   replicas: 3
   image:
-    tag: 7.17.15
+    tag: 8.11.3
   persistence:
     enabled: true
     aws:
@@ -906,7 +906,7 @@ elasticsearch-master-infra-v1:
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 kibana-v1:
   image:
-    tag: 7.17.15
+    tag: 8.11.3
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 es-curator-infra:
   namespace: es-cluster
