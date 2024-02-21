@@ -333,7 +333,7 @@ mdms-v2:
   
 egov-indexer:
   heap: "-Xmx512m -Xms512m"
-  memory_limits: "768Mi"
+  memory_limits: "1024Mi"
   initContainers:
     gitSync:
       repo: "git@github.com:upyog/upyog-configs"
